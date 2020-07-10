@@ -1,3 +1,6 @@
 # Create new
 .gradle
 .idea
+
+application-oauth.properties
+application.properties
