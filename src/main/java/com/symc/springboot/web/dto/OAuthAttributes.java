@@ -26,7 +26,7 @@ public class OAuthAttributes {
 
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
         if("naver".equals(registrationId)) {
-            ofNaver("id", attributes) ;
+            return ofNaver("id", attributes) ;
         }
         return ofGoogle(userNameAttributeName, attributes) ;
     }
@@ -43,7 +43,7 @@ public class OAuthAttributes {
 
     private static OAuthAttributes ofNaver(String userNameAttributeName, Map<String, Object> attributes) {
         Map<String, Object> response = (Map<String, Object>) attributes.get("response");
-
+        System.out.println("System");
         return OAuthAttributes.builder()
                 .name((String)response.get("name"))
                 .email((String)response.get("email"))
