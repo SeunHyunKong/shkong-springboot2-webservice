@@ -33,7 +33,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY #Travis repo settings에 설정 된 값
     secret_access_key: $AWS_SECRET_KEY #Travis repo settings 에 설정 된 값
     bucket: springboot-build-s3-burket
-    key: springboot-webservice.zip
+    key: shkong-springboot2-webservice.zip
     bundle_type: zip
     application: springboot-webservice
     deployment_group: springboot-webservice-group
