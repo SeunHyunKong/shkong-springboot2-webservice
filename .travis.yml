@@ -12,6 +12,9 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+before_install:
+  - chmod+x gradlew
+
 script: "./gradlew clean build -x test"
 
 before_deploy:
@@ -39,9 +42,6 @@ deploy:
     deployment_group: springboot-webservice-group
     region: ap-northeast-1
     wait-until-deployed: true
-
-before_install:
-  - chmod +x gradlew
 
 #CI 실행 완료시 메일로 알람
 notifications:
