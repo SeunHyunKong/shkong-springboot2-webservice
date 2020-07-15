@@ -17,7 +17,7 @@ script: "./gradlew clean build -x test"
 before_deploy:
   - zip -r shkong-springboot2-webservice *
   - mkdir -p deploy
-  - mv shkong-springboot2-webservice.zip deploy/shkong-springboot2-webservice.zip
+  - mv shkong-springboot2-webservice.zip wewbservice-deploy/shkong-springboot2-webservice.zip
 
 deploy:
   - provider: s3
